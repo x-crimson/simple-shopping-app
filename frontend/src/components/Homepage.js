@@ -18,7 +18,7 @@ const Homepage = () => {
   return (
     <div className="homepage-container">
       <header className="homepage-header">
-        <div className="logo">ONLINE <span>Store</span></div>
+        <div className="logo">SIMPLE <span>Shopping</span></div>
         <nav className="navbar">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -59,11 +59,11 @@ const Homepage = () => {
         </div>
       </div>
       <footer className="homepage-footer">
-        <p>&copy; Company Name 2020. All rights reserved.</p>
+        <p>&copy; Made by Amrit 2024. All rights reserved.</p>
         <div className="social-icons">
-          <a href="facebook.com"><img src="facebook.png" alt="Facebook" /></a>
-          <a href="instagram.com"><img src="instagram.png" alt="Instagram" /></a>
-          <a href="web.whatsapp.com"><img src="whatsapp.png" alt="WhatsApp" /></a>
+          <a href="www.facebook.com"><img src="facebook.png" alt="Facebook" /></a>
+          <a href="www.instagram.com"><img src="instagram.png" alt="Instagram" /></a>
+          <a href="www.eb.whatsapp.com"><img src="whatsapp.png" alt="WhatsApp" /></a>
         </div>
       </footer>
     </div>
