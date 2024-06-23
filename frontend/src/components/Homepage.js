@@ -61,9 +61,9 @@ const Homepage = () => {
       <footer className="homepage-footer">
         <p>&copy; Company Name 2020. All rights reserved.</p>
         <div className="social-icons">
-          <a href="#"><img src="facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="instagram.png" alt="Instagram" /></a>
-          <a href="#"><img src="whatsapp.png" alt="WhatsApp" /></a>
+          <a href="facebook.com"><img src="facebook.png" alt="Facebook" /></a>
+          <a href="instagram.com"><img src="instagram.png" alt="Instagram" /></a>
+          <a href="web.whatsapp.com"><img src="whatsapp.png" alt="WhatsApp" /></a>
         </div>
       </footer>
     </div>
