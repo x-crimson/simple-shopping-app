@@ -4,7 +4,7 @@ const BASE_URL = process.env.REACT_APP_API_URL;
 
 export const signup = (name, email, password, phone) => async dispatch => {
   try {
-    const res = await axios.post(`${BASE_URL}/signup`, { name, email, password, phone });
+    const res = await axios.post(`${BASE_URL}/api/auth/signup`, { name, email, password, phone });
     dispatch({ type: 'SIGNUP_SUCCESS', payload: res.data });
     return Promise.resolve();
   } catch (error) {
@@ -16,7 +16,7 @@ export const signup = (name, email, password, phone) => async dispatch => {
 
 export const login = (email, password) => async dispatch => {
   try {
-    const res = await axios.post(`${BASE_URL}/login`, { email, password });
+    const res = await axios.post(`${BASE_URL}api/auth/login`, { email, password });
     const { token, user } = res.data;
     localStorage.setItem('token', token); // Store the token in local storage
     dispatch({ type: 'LOGIN_SUCCESS', payload: { token, user } });
