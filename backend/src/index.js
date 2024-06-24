@@ -7,17 +7,18 @@ const redis = require('redis');
 dotenv.config();
 
 const app = express();
-app.use(cors());
-// app.use(cors({
-//   origin: 'https://shoppingsimple.netlify.app',
-// }));
+// app.use(cors());
+app.use(cors({
+  origin: 'https://shoppingsimple.netlify.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Redis
-const redisClient = redis.createClient({ url: process.env.REDIS_URL });
-redisClient.connect().catch(console.error);
+// const redisClient = redis.createClient({ url: process.env.REDIS_URL });
+// redisClient.connect().catch(console.error);
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/items', require('./routes/items'));
