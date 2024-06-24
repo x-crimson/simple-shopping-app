@@ -24,7 +24,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/items', require('./routes/items'));
 app.use('/api/cart', require('./routes/cart'));
 
-// to be removed once compleated the project
+
 // Root route for testing if api is working or not
 app.get('/', (req, res) => {
     res.send('API is working');

@@ -12,9 +12,9 @@ const router = express.Router();
 
 router.post('/signup', signup);
 router.post('/login', login);
-router.put('/:id', authMiddleware, updateUser); // Secure the route with auth middleware
-router.delete('/:id', authMiddleware, deleteUser); // Secure the route with auth middleware
-router.get('/:id', authMiddleware, getUser); // Optional: Secure if only authenticated users should view their own data
+router.put('/:id', authMiddleware, updateUser); 
+router.delete('/:id', authMiddleware, deleteUser);
+router.get('/:id', authMiddleware, getUser); 
 router.get('/', getUsers);
 
 module.exports = router;
