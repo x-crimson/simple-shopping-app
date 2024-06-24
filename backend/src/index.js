@@ -8,9 +8,9 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(cors({
-  origin: 'https://shoppingsimple.netlify.app', // Update with your frontend URL
-}));
+// app.use(cors({
+//   origin: 'https://shoppingsimple.netlify.app',
+// }));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -30,15 +30,15 @@ app.get('/', (req, res) => {
   });
 
 // This is for Testing Redis route
-app.get('/api/test-redis', async (req, res) => {
-  try {
-    await redisClient.set('test_key', 'test_value');
-    const value = await redisClient.get('test_key');
-    res.send(`Redis is working. Value: ${value}`);
-  } catch (err) {
-    res.status(500).send('Redis is not working properly');
-  }
-});
+// app.get('/api/test-redis', async (req, res) => {
+//   try {
+//     await redisClient.set('test_key', 'test_value');
+//     const value = await redisClient.get('test_key');
+//     res.send(`Redis is working. Value: ${value}`);
+//   } catch (err) {
+//     res.status(500).send('Redis is not working properly');
+//   }
+// });
   
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
